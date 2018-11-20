@@ -1,6 +1,6 @@
 # A Computed Style Observer
 
-The `ComputedStyleObserver` provides the ability to watch for changes being made to the style properties of DOM elements. 
+This prototype `ComputedStyleObserver` provides the ability to watch for changes being made to the style properties of DOM elements. 
 
 ## Example
 
@@ -37,6 +37,10 @@ The `ComputedStyleObserver` provides the ability to watch for changes being made
   computedStyleObserver.observe(document.getElementById('test'));
 </script>
 ```
+
+## :warning: A note on performance
+
+Internally, `ComputedStyleObserver` calls `getComputedStyle` for each observed element, every animation frame. Since `getComputedStyle` will trigger a style recalc (and sometimes reflows), performance will suffer as the number of observed elements increases.
 
 ---
 
