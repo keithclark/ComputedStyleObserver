@@ -1,0 +1,27 @@
+{
+  "name": "computed-style-observer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "rollup -f iife -m -i src/index.js -o dist/computedStyleObserver.js -w",
+    "build": "rollup -f iife -m -i src/index.js -o dist/computedStyleObserver.js",
+    "minify": "minify dist/computedStyleObserver.js | cat src/banner.js - > dist/computedStyleObserver.min.js",
+    "dist": "npm run build && npm run minify"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-minify": "^0.5.0",
+    "rollup": "^0.57.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keithclark/ComputedStyleObserver.git"
+  },
+  "author": "Keith Clark",
+  "bugs": {
+    "url": "https://github.com/keithclark/ComputedStyleObserver/issues"
+  },
+  "homepage": "https://github.com/keithclark/ComputedStyleObserver#readme",
+  "license": "MIT"
+}
